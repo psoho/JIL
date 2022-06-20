@@ -2,7 +2,7 @@
 
 #### 介绍
 
-JIL(Java Imaging Library) 让图像处理更简单
+**JIL**(Java Imaging Library) 让图像处理更简单
 
 #### 软件架构
 

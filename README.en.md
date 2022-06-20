@@ -2,7 +2,7 @@
 
 #### Description
 
-The JIL(Java Imaging Library) make image processing easier.
+The **JIL**(Java Imaging Library) make image processing easier.
 
 #### Software Architecture
 
