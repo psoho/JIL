@@ -48,7 +48,7 @@ public class Image {
      * 打开一个图像文件
      *
      * @param path 文件路径
-     * @return
+     * @return Image
      */
     @SneakyThrows
     public static Image open(String path) {
@@ -63,7 +63,7 @@ public class Image {
      * 构造一个Image对象
      *
      * @param im BufferedImage类型
-     * @return
+     * @return Image
      */
     private static Image buildImage(BufferedImage im) {
         Image image = new Image();

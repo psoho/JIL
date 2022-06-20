@@ -12,7 +12,7 @@ public class C {
     /**
      * 返回一个随机数16位
      *
-     * @return
+     * @return String
      */
     public static String code() {
         return code(16);
@@ -22,7 +22,7 @@ public class C {
      * 返回一个指定长度的随机数
      *
      * @param len 长度
-     * @return
+     * @return String
      */
     public static String code(int len) {
         String text = UUID.randomUUID().toString().replaceAll("-", "");
