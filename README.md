@@ -8,9 +8,7 @@ JIL(Java Imaging Library) 让图像处理更简单
 
 #### 软件架构
 
-基于 `Graphics2D` 和 `BufferedImage`，使用纯Java实现
-
-API设计参考了 [Pillow](https://pillow.readthedocs.io/en/latest/index.html)
+基于 `Graphics2D` 和 `BufferedImage`，API设计参考 [Pillow](https://pillow.readthedocs.io/en/latest/index.html) (一个Python图像处理库)
 
 #### 安装教程
 
