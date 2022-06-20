@@ -15,8 +15,8 @@ Add the dependent in your `pom.xml` file.
 ```xml
 <dependency>
     <groupId>cn.psoho</groupId>
-    <artifactId>jil</artifactId>
-    <version>1.0.0</version>
+    <artifactId>JIL</artifactId>
+    <version>0.0.1</version>
 </dependency>
 ```
 
