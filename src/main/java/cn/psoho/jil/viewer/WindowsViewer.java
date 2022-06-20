@@ -1,5 +1,7 @@
 package cn.psoho.jil.viewer;
 
+import lombok.SneakyThrows;
+
 /**
  * Windows 图像查看器
  *
@@ -11,8 +13,12 @@ public class WindowsViewer implements Viewer {
         new WindowsViewer().register();
     }
 
+    @SneakyThrows
     @Override
     public void showFile(String path) {
-
+        ProcessBuilder builder = new ProcessBuilder();
+        builder.command("start", "JIL", "/WAIT", path);
+        builder.start();
     }
+    
 }

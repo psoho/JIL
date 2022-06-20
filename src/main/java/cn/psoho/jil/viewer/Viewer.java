@@ -2,6 +2,7 @@ package cn.psoho.jil.viewer;
 
 
 import cn.psoho.jil.Image;
+import cn.psoho.jil.ImageException;
 import cn.psoho.jil.utils.C;
 
 import java.io.File;
@@ -34,7 +35,7 @@ public interface Viewer {
      */
     static void show(Image image) {
         if (viewers.size() <= 0) {
-            return;
+            throw new ImageException("No available viewer!");
         }
         // 生成临时文件
         String path = System.getProperty("java.io.tmpdir") + C.code() + ".png";
