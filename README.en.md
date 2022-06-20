@@ -1,7 +1,8 @@
 # JIL
 
 #### Description
-JIL(Java Imaging Library) 让Java操作图片更简单
+
+The JIL(Java Imaging Library) make image processing easier.
 
 #### Software Architecture
 Software architecture description

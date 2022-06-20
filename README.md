@@ -1,11 +1,16 @@
 # JIL
 
 #### 介绍
-JIL(Java Imaging Library) 让Java操作图片更简单
+
+JIL(Java Imaging Library) 让图像处理更简单
+
+这个库提供了广泛的文件格式支持、高效的内部表示和相当强大的图像处理能力。 核心图像库旨在快速访问以几种基本像素格式存储的数据。
 
 #### 软件架构
-软件架构说明
 
+基于 `Graphics2D` 和 `BufferedImage`，使用纯Java实现
+
+API设计参考了 [Pillow](https://pillow.readthedocs.io/en/latest/index.html)
 
 #### 安装教程
 
