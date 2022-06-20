@@ -1,8 +1,8 @@
-package cn.prodapi.jil.viewer;
+package cn.psoho.jil.viewer;
 
 
-import cn.prodapi.jil.Image;
-import cn.prodapi.jil.utils.C;
+import cn.psoho.jil.Image;
+import cn.psoho.jil.utils.C;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package cn.prodapi.jil;
+package cn.psoho.jil;
 
 import lombok.Data;
 import lombok.SneakyThrows;

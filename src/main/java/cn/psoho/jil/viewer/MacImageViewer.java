@@ -1,11 +1,11 @@
-package cn.prodapi.jil.viewer;
+package cn.psoho.jil.viewer;
 
 import lombok.SneakyThrows;
 
 public class MacImageViewer implements ImageViewer {
 
     public static void init() {
-        ImageViewer.viewers.add(new MacImageViewer());
+        viewers.add(new MacImageViewer());
     }
 
     @SneakyThrows

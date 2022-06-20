@@ -1,7 +1,7 @@
-package cn.prodapi.jil;
+package cn.psoho.jil;
 
-import cn.prodapi.jil.viewer.ImageViewer;
-import cn.prodapi.jil.viewer.MacImageViewer;
+import cn.psoho.jil.viewer.ImageViewer;
+import cn.psoho.jil.viewer.MacImageViewer;
 
 public class ImageShow {
 
