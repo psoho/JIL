@@ -8,21 +8,48 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
+/**
+ * 图像核心类
+ *
+ * @author 小新 fastposter@163.com
+ */
 @Data
 public class Image {
 
+    /**
+     * 图像尺寸
+     */
     public int[] size;
+    /**
+     * 图像宽度
+     */
     public int width;
+    /**
+     * 图像高度
+     */
     public int height;
+    /**
+     * 图像类型
+     */
     public String type = "png";
+    /**
+     * 画板
+     */
     public Graphics2D graphics;
-
+    /**
+     * 缓存图片
+     */
     BufferedImage im;
 
     public Image() {
-
     }
 
+    /**
+     * 打开一个图像文件
+     *
+     * @param path 文件路径
+     * @return
+     */
     @SneakyThrows
     public static Image open(String path) {
         File file = new File(path);
@@ -32,6 +59,12 @@ public class Image {
         return buildImage(ImageIO.read(file));
     }
 
+    /**
+     * 构造一个Image对象
+     *
+     * @param im BufferedImage类型
+     * @return
+     */
     private static Image buildImage(BufferedImage im) {
         Image image = new Image();
         image.im = im;
@@ -43,10 +76,18 @@ public class Image {
         return image;
     }
 
+    /**
+     * 显示图像
+     */
     public void show() {
         ImageShow.show(this);
     }
 
+    /**
+     * 保存图像
+     *
+     * @param path 文件路径
+     */
     @SneakyThrows
     public void save(String path) {
         ImageIO.write(im, type, new File(path));

@@ -8,10 +8,23 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 图像查看器
+ *
+ * @author 小新 fastposter@163.com
+ */
 public interface ImageViewer {
 
+    /**
+     * 图像查看器集合
+     */
     List<ImageViewer> viewers = new ArrayList<>();
 
+    /**
+     * 显示一个Image对象
+     *
+     * @param image Image类
+     */
     static void show(Image image) {
         if (viewers.size() <= 0) {
             return;
@@ -30,5 +43,10 @@ public interface ImageViewer {
         new File(path).deleteOnExit();
     }
 
+    /**
+     * 显示指定的图像文件
+     *
+     * @param path
+     */
     void showFile(String path);
 }
