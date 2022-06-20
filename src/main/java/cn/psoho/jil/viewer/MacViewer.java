@@ -7,14 +7,14 @@ import lombok.SneakyThrows;
  *
  * @author 小新 fastposter@163.com
  */
-public class MacImageViewer implements ImageViewer {
+public class MacViewer implements Viewer {
 
     /**
      * 初始化
      * 将当前类注册到ImageViewer集合中
      */
     public static void init() {
-        viewers.add(new MacImageViewer());
+        viewers.add(new MacViewer());
     }
 
     /**

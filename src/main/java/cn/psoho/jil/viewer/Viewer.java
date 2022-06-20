@@ -13,12 +13,12 @@ import java.util.List;
  *
  * @author 小新 fastposter@163.com
  */
-public interface ImageViewer {
+public interface Viewer {
 
     /**
      * 图像查看器集合
      */
-    List<ImageViewer> viewers = new ArrayList<>();
+    List<Viewer> viewers = new ArrayList<>();
 
     /**
      * 显示一个Image对象

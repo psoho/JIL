@@ -1,7 +1,7 @@
 package cn.psoho.jil;
 
-import cn.psoho.jil.viewer.ImageViewer;
-import cn.psoho.jil.viewer.MacImageViewer;
+import cn.psoho.jil.viewer.MacViewer;
+import cn.psoho.jil.viewer.Viewer;
 
 /**
  * 图像显示器
@@ -13,7 +13,7 @@ public class ImageShow {
     static {
         String osName = System.getProperty("os.name").toLowerCase();
         if (osName.startsWith("mac")) {
-            MacImageViewer.init();
+            MacViewer.init();
         }
     }
 
@@ -23,7 +23,7 @@ public class ImageShow {
      * @param image
      */
     public static void show(Image image) {
-        ImageViewer.show(image);
+        Viewer.show(image);
     }
 
 }
