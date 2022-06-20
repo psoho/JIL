@@ -4,19 +4,24 @@
 
 JIL(Java Imaging Library) 让图像处理更简单
 
-这个库提供了广泛的文件格式支持、高效的内部表示和相当强大的图像处理能力。 核心图像库旨在快速访问以几种基本像素格式存储的数据。
-
 #### 软件架构
 
 基于 `Graphics2D` 和 `BufferedImage`，API设计参考 [Pillow](https://pillow.readthedocs.io/en/latest/index.html) (一个Python图像处理库)
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+在`pom.xml`中添加依赖
+```xml
+<dependency>
+    <groupId>cn.psoho</groupId>
+    <artifactId>jil</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
 
 #### 使用说明
+
+示例代码
 
 ```java
 // 打开图片
