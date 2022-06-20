@@ -25,7 +25,6 @@ JIL(Java Imaging Library) 让图像处理更简单
 示例代码
 
 ```java
-
 // 打开图片
 Image img = Image.open("data/store/leo.jpeg");
 
