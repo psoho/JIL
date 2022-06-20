@@ -10,7 +10,8 @@ JIL(Java Imaging Library) 让图像处理更简单
 
 #### 安装教程
 
-在`pom.xml`中添加依赖
+在`pom.xml`文件中添加依赖
+
 ```xml
 <dependency>
     <groupId>cn.psoho</groupId>
@@ -24,6 +25,7 @@ JIL(Java Imaging Library) 让图像处理更简单
 示例代码
 
 ```java
+
 // 打开图片
 Image img = Image.open("data/store/leo.jpeg");
 
