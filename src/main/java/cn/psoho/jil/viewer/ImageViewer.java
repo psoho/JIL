@@ -18,7 +18,6 @@ public interface ImageViewer {
         }
         // 生成临时文件
         String path = System.getProperty("java.io.tmpdir") + C.code() + ".png";
-        System.out.println("path=" + path);
         image.save(path);
 
         // 调用查看
