@@ -6,10 +6,12 @@
     <artifactId>JIL</artifactId>
     <version>0.0.1</version>
     <name>JIL</name>
-    <description>JIL</description>
+    <description>The JIL(Java Imaging Library) make image processing easier.</description>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
