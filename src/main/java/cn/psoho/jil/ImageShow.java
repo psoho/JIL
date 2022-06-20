@@ -2,6 +2,7 @@ package cn.psoho.jil;
 
 import cn.psoho.jil.viewer.MacViewer;
 import cn.psoho.jil.viewer.Viewer;
+import cn.psoho.jil.viewer.WindowsViewer;
 
 /**
  * 图像显示器
@@ -14,6 +15,9 @@ public class ImageShow {
         String osName = System.getProperty("os.name").toLowerCase();
         if (osName.startsWith("mac")) {
             MacViewer.init();
+        }
+        if(osName.startsWith("windows")){
+            WindowsViewer.init();
         }
     }
 

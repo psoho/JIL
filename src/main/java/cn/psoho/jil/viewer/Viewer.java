@@ -21,6 +21,13 @@ public interface Viewer {
     List<Viewer> viewers = new ArrayList<>();
 
     /**
+     * 注册到图像查看器
+     */
+    default void register() {
+        viewers.add(this);
+    }
+
+    /**
      * 显示一个Image对象
      *
      * @param image Image类

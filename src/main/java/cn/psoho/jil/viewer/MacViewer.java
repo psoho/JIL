@@ -14,7 +14,7 @@ public class MacViewer implements Viewer {
      * 将当前类注册到ImageViewer集合中
      */
     public static void init() {
-        viewers.add(new MacViewer());
+        new MacViewer().register();
     }
 
     /**
