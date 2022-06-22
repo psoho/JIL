@@ -31,9 +31,10 @@ public interface Viewer {
     /**
      * 显示一个Image对象
      *
-     * @param image Image类
+     * @param image  Image类
+     * @param delete
      */
-    static void show(Image image) {
+    static void show(Image image, boolean delete) {
         if (viewers.size() <= 0) {
             throw new ImageException("No available viewer!");
         }
@@ -46,9 +47,11 @@ public interface Viewer {
             v.showFile(path);
         });
 
-        // 删除临时文件
-        // 20秒后删除
-        new File(path).deleteOnExit();
+        if (delete) {
+            // 删除临时文件
+            // 20秒后删除
+            new File(path).deleteOnExit();
+        }
     }
 
     /**

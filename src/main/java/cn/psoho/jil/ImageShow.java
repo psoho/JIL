@@ -25,9 +25,10 @@ public class ImageShow {
      * 显示图像
      *
      * @param image
+     * @param delete
      */
-    public static void show(Image image) {
-        Viewer.show(image);
+    public static void show(Image image, boolean delete) {
+        Viewer.show(image, delete);
     }
 
 }

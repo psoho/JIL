@@ -80,7 +80,16 @@ public class Image {
      * 显示图像
      */
     public void show() {
-        ImageShow.show(this);
+        ImageShow.show(this, true);
+    }
+
+    /**
+     * 显示图像
+     *
+     * @param delete 是否删除生成的临时文件
+     */
+    public void show(boolean delete) {
+        ImageShow.show(this, delete);
     }
 
     /**
@@ -112,16 +121,25 @@ public class Image {
     }
 
     /**
+     * 缩放，保持图像的高宽比
+     *
      * @param w 最大宽度
      * @param h 最大高度
      * @return
      */
     public Image thumbnail(int w, int h) {
         // 计算最大宽度
+        double s1 = w / (double) width;
+        double s2 = h / (double) height;
+        double s = Math.min(s1, s2);    // 获取最小比值
+        w = (int) (width * s);
+        h = (int) (height * s);
+        System.out.println("s1=" + s1 + ", s2=" + s2 + ", s=" + s + ", w=" + w + ", h=" + h + ", width=" + width + ", height=" + height);
         BufferedImage newImage = new BufferedImage(w, h, this.im.getType());
         Graphics2D g2d = newImage.createGraphics();
         g2d.drawImage(this.im, 0, 0, w, h, null);
         g2d.dispose();
         return buildImage(newImage);
     }
+
 }
