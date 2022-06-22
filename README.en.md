@@ -37,6 +37,11 @@ img.save("ddd.jpeg");
 // change image size
 Image newImg=img.resize(200,200);
 newImg.show();
+
+// change image size，Maintain the aspect ratio
+//        Image newImg2 = img.thumbnail(500, 600);              // [450, 600]
+Image newImg2 = img.thumbnail(10000, 10000);    // [7500, 10000]
+System.out.println(Arrays.toString(newImg2.size));
 ```
 
 Move forward a little bit each day.
