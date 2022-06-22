@@ -96,8 +96,8 @@ public class Image {
     /**
      * 调整图像大小，比例可能失调
      *
-     * @param w 最大宽度
-     * @param h 最大高度
+     * @param w 宽度
+     * @param h 最高度
      */
     public Image resize(int w, int h) {
 //        int imageType = this.im.getColorModel().getTransferType() ;
@@ -111,4 +111,17 @@ public class Image {
         return buildImage(newImage);
     }
 
+    /**
+     * @param w 最大宽度
+     * @param h 最大高度
+     * @return
+     */
+    public Image thumbnail(int w, int h) {
+        // 计算最大宽度
+        BufferedImage newImage = new BufferedImage(w, h, this.im.getType());
+        Graphics2D g2d = newImage.createGraphics();
+        g2d.drawImage(this.im, 0, 0, w, h, null);
+        g2d.dispose();
+        return buildImage(newImage);
+    }
 }

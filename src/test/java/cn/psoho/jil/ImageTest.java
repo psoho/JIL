@@ -7,7 +7,7 @@ public class ImageTest {
         Image img = Image.open("data/store/leo.jpeg");
 
 //         显示图片
-        img.show();
+//        img.show();
 
         // 保存图片
 //        img.save("ddd.jpeg");
@@ -15,6 +15,10 @@ public class ImageTest {
         // 调整图片尺寸
 //        Image newImg = img.resize(200, 200);
 //        newImg.show();
+
+        // 压缩图片，保持高宽比
+        Image newImg2 =img.thumbnail(200, 200);
+        newImg2.show();
 
     }
 
