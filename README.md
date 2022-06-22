@@ -37,6 +37,11 @@ img.save("ddd.jpeg");
 // 调整图片尺寸
 Image newImg = img.resize(200, 200);
 newImg.show();
+
+// 调整图片尺寸，保持高宽比
+//        Image newImg2 = img.thumbnail(500, 600);              // [450, 600]
+Image newImg2 = img.thumbnail(10000, 10000);    // [7500, 10000]
+System.out.println(Arrays.toString(newImg2.size));
 ```
 
 每天前进一点点
