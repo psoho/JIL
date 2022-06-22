@@ -39,6 +39,8 @@ Image newImg = img.resize(200, 200);
 newImg.show();
 ```
 
+每天前进一点点
+
 #### 参与贡献
 
 1.  Fork 本仓库

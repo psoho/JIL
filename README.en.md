@@ -39,6 +39,8 @@ Image newImg=img.resize(200,200);
 newImg.show();
 ```
 
+Move forward a little bit each day.
+
 #### Contribution
 
 1. Fork the repository
