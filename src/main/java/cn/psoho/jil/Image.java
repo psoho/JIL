@@ -77,6 +77,27 @@ public class Image {
     }
 
     /**
+     * 新建图像
+     *
+     * @param mode  模式 'RGB', 'RBGA'
+     * @param w     宽度
+     * @param h     高度
+     * @param color 颜色 十六进制，参考CSS颜色设置
+     * @return
+     */
+    public static Image New(String mode, int w, int h, String color) {
+        int imageType = BufferedImage.TYPE_INT_ARGB;
+        if ("RGB".equalsIgnoreCase(mode)) {
+            imageType = BufferedImage.TYPE_INT_RGB;
+        }
+        BufferedImage im = new BufferedImage(w, h, imageType);
+        Graphics2D graphic = im.createGraphics();
+        graphic.setColor(ImageColor.getrgb(color));
+        graphic.fillRect(0, 0, w, h);
+        return buildImage(im);
+    }
+
+    /**
      * 显示图像
      */
     public void show() {
