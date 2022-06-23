@@ -31,7 +31,7 @@ public class Image {
     /**
      * 图像类型
      */
-    public String type = "png";
+    public String type;
     /**
      * 画板
      */
