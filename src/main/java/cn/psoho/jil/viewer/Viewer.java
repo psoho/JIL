@@ -39,7 +39,7 @@ public interface Viewer {
             throw new ImageException("No available viewer!");
         }
         // 生成临时文件
-        String path = System.getProperty("java.io.tmpdir") + C.code() + ".png";
+        String path = System.getProperty("java.io.tmpdir") + C.code() + "." + image.getType();
         image.save(path);
 
         // 调用查看

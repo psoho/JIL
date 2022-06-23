@@ -72,6 +72,12 @@ public class Image {
         image.height = image.im.getHeight();
         image.size = new int[]{image.width, image.height};
         image.graphics = image.im.createGraphics();
+        int imageType = im.getType();
+        if (imageType == BufferedImage.TYPE_INT_ARGB) {
+            image.type = "png";
+        } else if (imageType == BufferedImage.TYPE_INT_RGB) {
+            image.type = "jpeg";
+        }
         System.out.println("type=" + image.im.getType() + ", image.im.getColorModel()=" + image.im.getColorModel());
         return image;
     }

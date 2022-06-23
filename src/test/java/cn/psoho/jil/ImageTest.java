@@ -17,7 +17,8 @@ public class ImageTest {
 //        thumbnail(img);
 
         // 新建图片
-        Image img = Image.New("RGB", 300, 200, "#00ffff");
+//        Image img = Image.New("RGB", 300, 200, "#00ffff");
+        Image img = Image.New("RGBA", 300, 200, "#00ffff");
         img.show();
     }
 
