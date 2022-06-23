@@ -42,6 +42,11 @@ newImg.show();
 //        Image newImg2 = img.thumbnail(500, 600);              // [450, 600]
 Image newImg2 = img.thumbnail(10000, 10000);    // [7500, 10000]
 System.out.println(Arrays.toString(newImg2.size));
+
+// create a new image
+//        Image img = Image.New("RGB", 300, 200, "#00ffff");
+Image img = Image.New("RGBA", 300, 200, "#00ffff");
+img.show();
 ```
 
 Move forward a little bit each day.
