@@ -13,7 +13,7 @@ public class ImageColor {
      * 获取颜色
      *
      * @param color 支持CSS十六进制表示
-     * @return
+     * @return Color
      */
     public static Color getrgb(String color) {
         color = color.substring(1);  // 去掉#号

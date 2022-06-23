@@ -89,7 +89,7 @@ public class Image {
      * @param w     宽度
      * @param h     高度
      * @param color 颜色 十六进制，参考CSS颜色设置
-     * @return
+     * @return Image
      */
     public static Image New(String mode, int w, int h, String color) {
         int imageType = BufferedImage.TYPE_INT_ARGB;
@@ -152,7 +152,7 @@ public class Image {
      *
      * @param w 最大宽度
      * @param h 最大高度
-     * @return
+     * @return Image
      */
     public Image thumbnail(int w, int h) {
         // 计算最大宽度
