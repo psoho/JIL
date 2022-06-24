@@ -18,10 +18,8 @@ public class ImageTest {
 
         // 新建图片
 //        Image img = Image.New("RGB", 300, 200, "#00ffff");
-//        Image img = Image.New("RGBA", 300, 200, "#00ffff");
-//        img.show();
-
-        Image img = Image.open("data/store/leo.jpeg");
+        Image img = Image.New("RGBA", 300, 200, "#ff000060");
+        img.show();
 
     }
 
