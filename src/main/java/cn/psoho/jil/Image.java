@@ -7,6 +7,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.InputStream;
 
 /**
  * 图像核心类
@@ -57,6 +58,28 @@ public class Image {
             throw new ImageException("Can't read input file! " + path);
         }
         return buildImage(ImageIO.read(file));
+    }
+
+    /**
+     * 打开一个图像文件
+     *
+     * @param file 文件对象
+     * @return Image
+     */
+    @SneakyThrows
+    public static Image open(File file) {
+        return buildImage(ImageIO.read(file));
+    }
+
+    /**
+     * 打开一个图像流
+     *
+     * @param in 文件路径
+     * @return Image
+     */
+    @SneakyThrows
+    public static Image open(InputStream in) {
+        return buildImage(ImageIO.read(in));
     }
 
     /**
