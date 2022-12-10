@@ -1,15 +1,19 @@
 package cn.psoho.jil;
 
+import lombok.SneakyThrows;
+
+import java.io.FileInputStream;
 import java.util.Arrays;
 
 public class ImageTest {
 
 
+    @SneakyThrows
     public static void main(String[] args) {
         // 打开图片
-//        Image img = Image.open("data/store/leo.jpeg");
-//         显示图片
-//        img.show();
+        Image img = Image.open("data/store/leo.jpeg");
+        // 显示图片
+        img.show();
 
         // 保存图片
 //        img.save("ddd.jpeg");
@@ -18,8 +22,11 @@ public class ImageTest {
 
         // 新建图片
 //        Image img = Image.New("RGB", 300, 200, "#00ffff");
-        Image img = Image.New("RGBA", 300, 200, "#ff000060");
-        img.show();
+//        Image img = Image.New("RGBA", 300, 200, "#ff000060");
+//        img.show();
+
+//        Image img = Image.open(new FileInputStream("data/store/leo.jpeg"));
+//        img.show();
 
     }
 
