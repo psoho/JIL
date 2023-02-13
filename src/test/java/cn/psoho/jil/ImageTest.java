@@ -12,6 +12,7 @@ public class ImageTest {
     public static void main(String[] args) {
         // 打开图片
         Image img = Image.open("data/store/leo.jpeg");
+        // type=5, image.im.getColorModel()=ColorModel: #pixelBits = 24 numComponents = 3 color space = java.awt.color.ICC_ColorSpace@76fb509a transparency = 1 has alpha = false isAlphaPre = false
         // 显示图片
         img.show();
 
@@ -21,6 +22,7 @@ public class ImageTest {
 //        thumbnail(img);
 
         // 新建图片
+        // type=2, image.im.getColorModel()=DirectColorModel: rmask=ff0000 gmask=ff00 bmask=ff amask=ff000000
 //        Image img = Image.New("RGB", 300, 200, "#00ffff");
 //        Image img = Image.New("RGBA", 300, 200, "#ff000060");
 //        img.show();

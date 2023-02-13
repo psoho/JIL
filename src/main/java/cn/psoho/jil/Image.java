@@ -83,12 +83,23 @@ public class Image {
     }
 
     /**
+     * 打开一个图像流
+     *
+     * @param in 文件路径
+     * @return Image
+     */
+    @SneakyThrows
+    public static Image open(BufferedImage in) {
+        return buildImage(in);
+    }
+
+    /**
      * 构造一个Image对象
      *
      * @param im BufferedImage类型
      * @return Image
      */
-    private static Image buildImage(BufferedImage im) {
+    public static Image buildImage(BufferedImage im) {
         Image image = new Image();
         image.im = im;
         image.width = image.im.getWidth();
@@ -96,12 +107,13 @@ public class Image {
         image.size = new int[]{image.width, image.height};
         image.graphics = image.im.createGraphics();
         int imageType = im.getType();
+        image.type = "jpeg";    // 设置默认值
         if (imageType == BufferedImage.TYPE_INT_ARGB) {
             image.type = "png";
         } else if (imageType == BufferedImage.TYPE_INT_RGB) {
             image.type = "jpeg";
         }
-        System.out.println("type=" + image.im.getType() + ", image.im.getColorModel()=" + image.im.getColorModel());
+        System.out.println("typeName=" + image.type + ", im.type=" + image.im.getType() + ", image.im.getColorModel()=" + image.im.getColorModel());
         return image;
     }
 
