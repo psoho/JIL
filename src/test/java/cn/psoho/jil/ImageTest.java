@@ -2,7 +2,6 @@ package cn.psoho.jil;
 
 import lombok.SneakyThrows;
 
-import java.io.FileInputStream;
 import java.util.Arrays;
 
 public class ImageTest {

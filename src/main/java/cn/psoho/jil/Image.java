@@ -138,6 +138,26 @@ public class Image {
         return buildImage(im);
     }
 
+    public static Image New(int w, int h, String color) {
+        return New("RGBA", w, h, color);
+    }
+
+    public static Image New(int w, int h) {
+        Image img = New("RGBA", w, h, "#ffffff");
+        Graphics2D g2 = img.graphics;
+        //        消文字锯齿：RenderingHints.KEY_TEXT_ANTIALIASING
+        //        消绘图锯齿：RenderingHints.KEY_ANTIALIASING
+
+        // 划线平滑
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_DEFAULT);
+
+        // 恢复默认
+//        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_OFF);
+//        g2.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL,RenderingHints.VALUE_STROKE_PURE);
+        return img;
+    }
+
     /**
      * 显示图像
      */
