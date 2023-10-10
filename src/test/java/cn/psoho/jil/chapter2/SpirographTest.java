@@ -11,10 +11,10 @@ public class SpirographTest {
 
         Image img = Image.New(600, 600);
 
-        Graphics2D g2 = img.graphics; //强制转换为Graphice2D对象
+        Graphics2D g2 = img.graphics;
 
         g2.translate(300, 300);
-        g2.setColor(ImageColor.getrgb("#363062"));
+        g2.setColor(ImageColor.getrgb("#232D3F"));
 
         int nPoints = 1000;
         double r1 = 60;
